@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+    <h1>Hello World!</h1>
+
+    digite sua velocidade: <input type="number" id="txtvel"> Km/h
+    <input type="button" name="btn" value="enviar" id="btnV" onclick="calcular()">
+
+    <div id="res"></div>
+
+    <script>
+        
+        function calcular(){
+
+            var txtvel = document.getElementById("txtvel")
+            var res = document.querySelector("div#res")
+            var vel = Number(txtvel.value)
+
+            res.innerHTML = `Sua velocidade é de ${vel} Km/h`
+
+            if (vel > 60){
+                res.innerHTML = `O limite é de 60Km/h <strong>QUER CORRER VAI PRA PISTA!!</strong>`
+            }
+            else if(vel <= 60 && vel >= 30){
+                res.innerHTML = `Parabéns, vc está respeitando o limite de 60Km/h`
+            }
+            else if(vel < 30){
+                res.innerHTML = `Tu tá à ${vel}Kmh! <strong>SE FOR PRA IR ASSIM VAI ANDANDO!!!</strong>`
+            }
+        }
+
+    </script>
+</body>
+</html>

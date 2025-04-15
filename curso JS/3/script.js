@@ -26,6 +26,6 @@ else if(pais == "EUA"){
 else if(pais == "RUS"){
     console.log("Você é Russo(a)")
 }
-else if(POR){
+else if(pais == "POR"){
     console.log("Você é Português")
 }
