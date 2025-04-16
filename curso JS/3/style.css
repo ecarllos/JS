@@ -4,3 +4,14 @@
     top: 0;
 }
 
+h1{
+    margin: 20px;
+}
+h3{
+    display: inline;
+    margin-left: 20px;
+}
+
+input{
+    margin: 5px ;
+}

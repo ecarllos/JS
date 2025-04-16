@@ -1,3 +1,5 @@
+// Exercício 01
+
 var nome = "Eduardo"
 var idade = 17
 var cidade = "fortaleza"

@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <title>nacionalidade</title>
 </head>
 <body>
 
     <h1>Tu é cria ou é gringo?</h1>
 
-    <input type="">
+    <h3>Vc nasceu em:</h3>
 
-    <select id="opcoes" name="opcoes">
-        <option value="opcao1">Opção 1</option>
-        <option value="opcao2">Opção 2</option>
-        <option value="opcao3">Opção 3</option>
-      </select>
+    <select id="opcoes" name="opcoes" value="opções">
+        <option value="brasil">Brasil</option>
+        <option value="russia">Rússia</option>
+        <option value="eua">EUA</option>
+    </select>
+
+    <input type="button" value="enviar" id="btn" onclick="escolher()">
+
+    <script>
+
+        function escolher(){
+            var pais = document.getElementById("opcoes").value
+
+            switch (pais){
+                case "brasil":
+                    alert(`tu é cria`)
+                    break
+                case "russia":
+                    alert("vc é russo, GRINGO")
+                    break
+                case "eua":
+                    alert("tu é americano, GRINGO")
+                    break
+            }
+
+        }
+
+    </script>
 </body>
 </html>
