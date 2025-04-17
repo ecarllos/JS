@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex01.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,19 +13,37 @@
     </header>
     
     <section>
-
-        <div id="div1">
-
-        </div>
-
-        <div id="div2">
-
-        </div>
-
+        <p id="p">
+            testando...
+        </p>
     </section>
 
     <footer>
         <p>&copy;kxdw.7z</p>
     </footer>
+
+
+    <script>
+        var data = new Date()
+        var hr = data.getHours()
+        var text = document.querySelector("section#p")
+
+        if (hr == 0){
+            text.innerHTML = ``
+            alert("é meia noite")
+        }
+        else if (hr > 0 && hr <5){
+            text.innerHTML = `Está de madrugada`
+        }
+        else if (hr > 4 && hr<13){
+            text.innerHTML = `Está de manhã`
+        }
+        else if (hr>12 && hr<18){
+            text.innerHTML = `Está de tarde`
+        }
+        else if (hr >17 && hr<24){
+            text.innerHTML = `Está de noite`
+        }
+    </script>
 </body>
 </html>
