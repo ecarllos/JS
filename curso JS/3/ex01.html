@@ -26,11 +26,11 @@
     <script>
         var data = new Date()
         var hr = data.getHours()
-        var text = document.querySelector("section#p")
+        var text = document.querySelector("section")
+
 
         if (hr == 0){
             text.innerHTML = ``
-            alert("é meia noite")
         }
         else if (hr > 0 && hr <5){
             text.innerHTML = `Está de madrugada`
