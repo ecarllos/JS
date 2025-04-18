@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex02.css">
+    <title>Verificador de idade</title>    
+</head>
+<body>
+    
+  
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    
+    <section>
+        <div>
+            <p>
+                Ano de nascimento: 
+                <input type="number" name="txtano" id="txtano" min="0" max="2025">
+            </p>
+            <p>
+                sexo: 
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Femenino</label>
+            </p>
+
+            <input type="button" id="btn" value="enviar" onclick="calcular()">
+        </div>
+
+        <div id="res">
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy;kxdw.7z</p>
+    </footer>
+
+
+    <script>
+
+    alert("ok")
+
+    function calcular(){
+        var ANO = new Date()
+        var hj = ANO.getFullYear()
+        var ano_formulario = document.getElementById("txtano")
+        var anoF = ano_formulario.value
+        var res = document.getElementById("res")
+
+        if (anoF == 0 || anoF > hj || anoF < 1900){
+            alert("[ERRO] Insira uma data correta")
+        }
+        else{
+            var idade = hj - anoF
+            var radsex = document.getElementsByName("radsex")
+            var sexo = ""
+            
+            if (radsex[0].checked){
+                var sexo = "homem"
+            }
+            else if (radsex[1].checked){
+                var sexo = "mulher"
+            }
+
+            res.innerHTML = `Vc é um(a) ${sexo} com ${idade} anos` 
+        }
+    }
+        
+    </script>
+</body>
+</html>
