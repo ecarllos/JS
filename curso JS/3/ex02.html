@@ -61,13 +61,36 @@
             var sexo = ""
             
             if (radsex[0].checked){
-                var sexo = "homem"
+                
+                if (idade < 11){
+                    var sexo = "um menino"
+                }
+                else if(idade < 18){
+                    var sexo = "um adolescente"
+                }
+                else if (idade < 50){
+                    var sexo = "um homem adulto"
+                }
+                else{
+                    var sexo = "um velho"
+                }
             }
             else if (radsex[1].checked){
-                var sexo = "mulher"
+                if (idade < 11){
+                    var sexo = "uma menina"
+                }
+                else if(idade < 18){
+                    var sexo = "uma adolescente"
+                }
+                else if (idade < 50){
+                    var sexo = "uma mulher adulta"
+                }
+                else{
+                    var sexo = "uma velha"
+                }
             }
 
-            res.innerHTML = `Vc é um(a) ${sexo} com ${idade} anos` 
+            res.innerHTML = `Vc é um ${sexo} com ${idade} anos` 
         }
     }
         
