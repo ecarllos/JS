@@ -34,15 +34,18 @@
         }
         else if (hr > 0 && hr <5){
             text.innerHTML = `Está de madrugada`
+            document.body.style.background = "#252525"
         }
         else if (hr > 4 && hr<13){
             text.innerHTML = `Está de manhã`
         }
         else if (hr>12 && hr<18){
             text.innerHTML = `Está de tarde`
+            document.body.style.background = "#f6d900"
         }
         else if (hr >17 && hr<24){
             text.innerHTML = `Está de noite`
+            document.body.style.background = "#000"
         }
     </script>
 </body>
