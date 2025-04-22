@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    top: 0;
+    color: #9e9e9e;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    background-color: #0a7371;
+}
+
+h1{
+    color: #fff;
+}
+
+section{
+    display: flex;
+    flex-direction: column  ;
+    width: 40%;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 10px;
+    box-shadow: 5px 5px 20px #000000;
+}
+
+div{
+    margin: 5px;
+}
+
+
+footer{
+    margin: 10px;
+}
