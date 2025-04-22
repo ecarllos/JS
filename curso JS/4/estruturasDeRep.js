@@ -25,6 +25,27 @@
 
 // com variavel de controle (FOR)
 
-for(var c=1;c<=4;c++){
-    console.log(c)
+// for(var c=1;c<=4;c++){
+//     console.log(c)
+// }
+
+
+
+
+// LOGICA EX01
+// var list = []
+
+// for( var c = 1; c <= 3; c++){
+//     list.push(c)
+//     console.log(list)
+// }
+
+
+
+
+// LOGICA EX 02
+let n = 2
+
+for(let c = 1; c <= 10; c++){
+    console.log(`${n} x ${c} = ${n * c}`)
 }
