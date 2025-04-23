@@ -14,7 +14,7 @@
 
 // ---------------------------------
 
-let array = [2,4,5,6,3,52,65,76,54,76,241,90]
+let array = [2,4,5,6]
 
 let qnt = array.length
 
@@ -26,7 +26,7 @@ let qnt = array.length
 
 
 
-let n = []
+
 for(let c in array){ //código de simplificação onde a variável contadora (c) está percorrendo a array
     let n = array[c] // uma variável para indicar a posição dos valores da array simbolizada pela variável contadora crescente de acordo a array (c)
     let pos = array.indexOf(n) // indica a posição de um determinado valor da array deternimado pela variavel (n)
