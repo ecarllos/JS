@@ -29,6 +29,10 @@ section{
     box-shadow: 5px 5px 20px #000000;
 }
 
+select{
+    width: 30%;
+}
+
 div{
     margin: 5px;
 }
