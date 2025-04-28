@@ -1,1 +1,0 @@
-confirm("pudim é bom!")
