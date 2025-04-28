@@ -4,7 +4,7 @@ let res = document.getElementById("res") // indica a div onde as respostas serã
 
 let list = [] // cria o array onde os dados serão inseridos e calculados
 
-let add
+let add = 0
 function naLista(n, l){ //função que verifica se o número digitado está na lista ou não
     // n == valor digittado pelo usuário
     // l == lista que o valor foi atribuído
@@ -38,7 +38,7 @@ function adicionar(){
     else { // passada a estapa de condições o código de implantação de números começa agora
 
         list.push(num) // adiciona o número digitado a nossa array
-        let add = document.createElement("option") // cria um elemento (option) dentro do nosso select caracterizado pela variável (add)
+        add = document.createElement("option") // cria um elemento (option) dentro do nosso select caracterizado pela variável (add)
         add.text = `Valor ${num} adicionado` // adiciona um texto a variável (add) que será o texto que o usuário vai conseguir olhar
         seltab.appendChild(add)
     }
@@ -89,6 +89,6 @@ function limpar(){
 
 
     seltab.removeChild(add)
-     res.innerHTML = " ."
+    res.innerHTML = " ."
 }
 
