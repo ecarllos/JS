@@ -38,6 +38,6 @@ footer{
     margin: 10px;
 }
 
-#btnf{
-    display:block;
+.btn{
+    display: inline;
 }

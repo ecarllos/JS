@@ -1,8 +1,10 @@
-let = seltab = document.getElementById("seltab") // indica o select pela variável (seltab)
+let seltab = document.getElementById("seltab") // indica o select pela variável (seltab)
 let txtn = document.getElementById("txtn") // indica o input numérico pela variável (txtn)
+let res = document.getElementById("res") // indica a div onde as respostas serão inseridas
 
 let list = [] // cria o array onde os dados serão inseridos e calculados
 
+let add
 function naLista(n, l){ //função que verifica se o número digitado está na lista ou não
     // n == valor digittado pelo usuário
     // l == lista que o valor foi atribuído
@@ -26,7 +28,7 @@ function adicionar(){
     */
     let num = Number(txtn.value) // simplifica o processo de filtragem de elementos utilizandp a variável (num)
 
-    if(num.lenght == 0 || num >= 10 ){ // verifica se a caixa numérica está vazia ou se o número digitado é maior ou igual a 10
+    if(txtn.value.length == 0 || num >= 100 ){ // verifica se a caixa numérica está vazia ou se o número digitado é maior ou igual a 10
         alert("digite um número corretamente")
     } 
     else if( !naLista(num, list)){ // utiliza a função vista anteriormente para verificar se o número digitado já foi cadastrado antes
@@ -42,17 +44,20 @@ function adicionar(){
     }
     txtn.value = '' // faz com que no final do processo de adicionar a caixa de texto fique limpa/vazia
     txtn.focus() 
+
+    res.innerHTML = list
 }
 
 function calcular(){
-    let res = document.getElementById("res") // indica a div onde as respostas serão inseridas
-
+    
     if (list.length == 0){ // verifica se a tabela está vaiza ou não
         alert("cadastre algum número antes de enviar")
     } else{
-        
-        list.sort() // organiza a lista em ordem crescente 
 
+        if(list.length > 1){ // se tiver mais de 1 número cadastrado na array ele organizará a lista
+            list.sort((a, b) => a - b)
+        } 
+    
         /* OBS: infelizmente a função array.sort() foi feita para string,
         e quando colocada para interagir com números ela os trata como string, 
         por isso que esse código só permite números de 1 a 9 pq se for algum número
@@ -62,10 +67,10 @@ function calcular(){
         let maior_numero = list[total-1] // calcula o maoir número da array (list) pegando a última posição da lis
         let menor_numero = list[0] // calcula o menor número pegando o 1° número cadastrado na array, já que a array foi ordanada em ordem crescente
         let soma = 0; // variável de soma 
-        for (let c in list) { // a variável (c)  percorrerá toda a array => sua função é adquirir o valor de acordo com a posição da array
-            soma += list[c]; // adiciona o valor de (c) na variável (soma) e depois adicionna o novo valor de (c) com o antigo armazenado na variável (soma) 
+        for (let c of list) { // a variável (c)  percorrerá toda a array => sua função é adquirir o valor de acordo com a posição da array
+            soma += c // adiciona o valor de (c) na variável (soma) e depois adicionna o novo valor de (c) com o antigo armazenado na variável (soma) 
         }
-        let media = soma / list.length; // calcula a media dos números cadastrados => pega a variável de soma e divide pelo total de números
+        let media = soma / list.length // calcula a media dos números cadastrados => pega a variável de soma e divide pelo total de números
 
 
 
@@ -77,5 +82,13 @@ function calcular(){
         res.innerHTML += `<p> A média dos números cadastrados é ${media}</p>`        
     }
 
+}
+
+function limpar(){
+    list.splice(0, list.length) // apaga todos os elementos da array
+
+
+    seltab.removeChild(add)
+     res.innerHTML = " ."
 }
 
